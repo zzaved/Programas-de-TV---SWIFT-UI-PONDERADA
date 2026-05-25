@@ -8,14 +8,19 @@
 import SwiftUI
 
 struct InfoBadge: View {
+    let icone: String
+    let valor: String
+    let rotulo: String
+
     var body: some View {
         VStack {
-            // TODO: icone (SF Symbol ou emoji) + valor em bold + rotulo em footnote
-            Text("InfoBadge")
+            Image(systemName: icone)
+            Text(valor)
+            Text(rotulo)
         }
     }
 }
 
 #Preview {
-    InfoBadge()
+    InfoBadge(icone: "tv", valor: "720", rotulo: "Episodios")
 }

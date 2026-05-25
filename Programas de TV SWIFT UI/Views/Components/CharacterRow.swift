@@ -8,14 +8,21 @@
 import SwiftUI
 
 struct CharacterRow: View {
+    let nome: String
+    let papel: String
+    let emoji: String
+
     var body: some View {
         HStack {
-            // TODO: emoji a esquerda + VStack com nome (headline) e papel (subheadline)
-            Text("CharacterRow")
+            Text(emoji)
+            VStack(alignment: .leading) {
+                Text(nome)
+                Text(papel)
+            }
         }
     }
 }
 
 #Preview {
-    CharacterRow()
+    CharacterRow(nome: "Naruto Uzumaki", papel: "Protagonista", emoji: "\u{1F9C6}")
 }

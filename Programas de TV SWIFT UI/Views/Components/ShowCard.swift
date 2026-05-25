@@ -12,17 +12,20 @@ struct ShowCard: View {
 
     var body: some View {
         HStack(spacing: 12) {
-            // TODO A: barra lateral colorida por tipo
-            // TODO B: thumbnail com emoji
+            // barra lateral
+            Rectangle()
+                .frame(width: 6)
+            // thumbnail com emoji
+            Text(programa.emoji)
             VStack(alignment: .leading, spacing: 4) {
-                // TODO C: badge de tipo + nome + genero + avaliacao
-                Text(programa.nome)
+                Text(programa.tipo)        // badge de tipo
+                Text(programa.nome)        // nome
+                Text(programa.genero)      // genero
+                Text("\(programa.avaliacao) estrelas")  // avaliacao
             }
             Spacer()
-            // TODO D: chevron Image(systemName: "chevron.right")
+            Image(systemName: "chevron.right")
         }
-        .background(Color(.systemBackground))
-        .cornerRadius(16)
     }
 }
 
