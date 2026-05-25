@@ -1,33 +1,23 @@
 import SwiftUI
 
 struct ListaView: View {
+    let programas = [naruto, avatar, strangerThings]
+
     var body: some View {
         NavigationStack {
-            VStack(spacing: 16) {
-                NavigationLink {
-                    NarutoDetailView()
-                } label: {
-                    ShowCard(programa: naruto)
+            ScrollView {
+                VStack(spacing: 16) {
+                    ForEach(programas, id: \.nome){ programa in
+                        NavigationLink {
+                            ProgramaDetailView(programa: programa)
+                        } label: {
+                          ShowCard(programa: programa)
+                        }
+                        .buttonStyle(.plain)
+                    }
                 }
-                .buttonStyle(.plain)
-
-                NavigationLink {
-                    AvatarDetailView()
-                } label: {
-                    ShowCard(programa: avatar)
-                }
-                .buttonStyle(.plain)
-
-                NavigationLink {
-                    StrangerDetailView()
-                } label: {
-                    ShowCard(programa: strangerThings)
-                }
-                .buttonStyle(.plain)
-
-                Spacer()
+                .padding()
             }
-            .padding()
             .navigationTitle("Programas")
         }
     }
