@@ -1,26 +1,18 @@
-//
-//  Programa.swift
-//  Programas de TV SWIFT UI
-//
-//  Modelo de dados fornecido pelo professor -- nao alterar
-//
-
 import Foundation
 
 struct Programa {
     let nome: String
-    let tipo: String       // "Anime" | "Desenho" | "Serie"
+    let tipo: String
     let emoji: String
     let genero: String
     let sinopse: String
     let episodios: Int
     let temporadas: Int
-    let avaliacao: Double  // 0.0 - 5.0
-    let status: String     // "Em exibicao" | "Concluido"
+    let avaliacao: Double
+    let status: String
     let personagens: [(nome: String, papel: String, emoji: String)]
 }
 
-// Dados fornecidos -- nao alterar
 let naruto = Programa(
     nome: "Naruto", tipo: "Anime", emoji: "\u{1F9C6}",
     genero: "Acao - Aventura",

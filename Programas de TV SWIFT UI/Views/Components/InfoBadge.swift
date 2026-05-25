@@ -13,14 +13,22 @@ struct InfoBadge: View {
     let rotulo: String
 
     var body: some View {
-        VStack {
+        VStack(spacing: 6) {
             Image(systemName: icone)
             Text(valor)
+                .bold()
             Text(rotulo)
+                .font(.footnote)
+                .foregroundStyle(.secondary)
         }
+        .padding()
+        .frame(maxWidth: .infinity)
+        .background(Color(.secondarySystemBackground))
+        .cornerRadius(12)
     }
 }
 
 #Preview {
     InfoBadge(icone: "tv", valor: "720", rotulo: "Episodios")
+        .padding()
 }
