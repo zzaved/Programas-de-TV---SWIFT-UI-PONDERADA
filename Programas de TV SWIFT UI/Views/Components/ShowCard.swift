@@ -12,19 +12,14 @@ struct ShowCard: View {
 
     var body: some View {
         HStack(spacing: 12) {
-            // barra lateral
-            Rectangle()
-                .frame(width: 6)
-            // thumbnail com emoji
-            Text(programa.emoji)
+            // thumbnail com icone
+            Image(systemName: "tv")
             VStack(alignment: .leading, spacing: 4) {
                 Text(programa.tipo)        // badge de tipo
                 Text(programa.nome)        // nome
                 Text(programa.genero)      // genero
                 Text("\(programa.avaliacao) estrelas")  // avaliacao
             }
-            Spacer()
-            Image(systemName: "chevron.right")
         }
     }
 }

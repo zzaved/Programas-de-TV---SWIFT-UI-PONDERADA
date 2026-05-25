@@ -13,7 +13,7 @@ struct AvatarDetailView: View {
             VStack(alignment: .leading, spacing: 16) {
                 // Hero
                 ZStack {
-                    Text(avatar.emoji)
+                    Image(systemName: "tv")
                         .font(.system(size: 80))
                     Text(avatar.nome)
                 }
@@ -27,14 +27,6 @@ struct AvatarDetailView: View {
                     InfoBadge(icone: "tv", valor: "\(avatar.episodios)", rotulo: "Episodios")
                     InfoBadge(icone: "rectangle.stack", valor: "\(avatar.temporadas)", rotulo: "Temporadas")
                     InfoBadge(icone: "checkmark.circle", valor: avatar.status, rotulo: "Status")
-                }
-
-                // Personagens
-                Text("Personagens Principais")
-                ForEach(avatar.personagens.indices, id: \.self) { i in
-                    CharacterRow(nome: avatar.personagens[i].nome,
-                                 papel: avatar.personagens[i].papel,
-                                 emoji: avatar.personagens[i].emoji)
                 }
             }
         }

@@ -13,7 +13,7 @@ struct StrangerDetailView: View {
             VStack(alignment: .leading, spacing: 16) {
                 // Hero
                 ZStack {
-                    Text(strangerThings.emoji)
+                    Image(systemName: "tv")
                         .font(.system(size: 80))
                     Text(strangerThings.nome)
                 }
@@ -27,14 +27,6 @@ struct StrangerDetailView: View {
                     InfoBadge(icone: "tv", valor: "\(strangerThings.episodios)", rotulo: "Episodios")
                     InfoBadge(icone: "rectangle.stack", valor: "\(strangerThings.temporadas)", rotulo: "Temporadas")
                     InfoBadge(icone: "checkmark.circle", valor: strangerThings.status, rotulo: "Status")
-                }
-
-                // Personagens
-                Text("Personagens Principais")
-                ForEach(strangerThings.personagens.indices, id: \.self) { i in
-                    CharacterRow(nome: strangerThings.personagens[i].nome,
-                                 papel: strangerThings.personagens[i].papel,
-                                 emoji: strangerThings.personagens[i].emoji)
                 }
             }
         }

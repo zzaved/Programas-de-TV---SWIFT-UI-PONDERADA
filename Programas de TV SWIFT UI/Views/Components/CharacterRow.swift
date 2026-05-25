@@ -10,11 +10,10 @@ import SwiftUI
 struct CharacterRow: View {
     let nome: String
     let papel: String
-    let emoji: String
 
     var body: some View {
         HStack {
-            Text(emoji)
+            Image(systemName: "person.fill")
             VStack(alignment: .leading) {
                 Text(nome)
                 Text(papel)
@@ -24,5 +23,5 @@ struct CharacterRow: View {
 }
 
 #Preview {
-    CharacterRow(nome: "Naruto Uzumaki", papel: "Protagonista", emoji: "\u{1F9C6}")
+    CharacterRow(nome: "Naruto Uzumaki", papel: "Protagonista")
 }
