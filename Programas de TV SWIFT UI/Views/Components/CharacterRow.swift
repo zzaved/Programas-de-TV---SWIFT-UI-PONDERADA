@@ -1,10 +1,3 @@
-//
-//  CharacterRow.swift
-//  Programas de TV SWIFT UI
-//
-//  Componente reutilizavel - linha de personagem (Tela 2)
-//
-
 import SwiftUI
 
 struct CharacterRow: View {

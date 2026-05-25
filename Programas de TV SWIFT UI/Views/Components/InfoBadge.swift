@@ -1,10 +1,3 @@
-//
-//  InfoBadge.swift
-//  Programas de TV SWIFT UI
-//
-//  Componente reutilizavel - badge de info do detalhe (Tela 2)
-//
-
 import SwiftUI
 
 struct InfoBadge: View {

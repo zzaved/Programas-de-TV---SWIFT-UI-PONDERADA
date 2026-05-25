@@ -1,10 +1,3 @@
-//
-//  ShowCard.swift
-//  Programas de TV SWIFT UI
-//
-//  Componente reutilizavel - card da lista (Tela 1)
-//
-
 import SwiftUI
 
 struct ShowCard: View {
